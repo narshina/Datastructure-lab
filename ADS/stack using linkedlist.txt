@@ -1,0 +1,76 @@
+#include<stdioh>
+struct node
+{
+int data;
+struct node*next;
+}*top=NULL;
+void push(int);
+void pop();
+void display();
+void main();
+{
+int choice,value;
+while(1)
+{
+printf("1.psh\n2.pop\n3.display\n.exit");
+printf("enter yur choice:");
+scanf("%d",&choice);
+switch(choice)
+{
+case1:
+printf("enter the value to be insert:");
+scanf("%d",&value);
+push(value)
+break;
+case2:
+pop();
+break;
+case3:
+display();
+break;
+case4:
+exit(0);
+default:
+printf("wrong selection");
+}
+}
+}
+void push(int value)
+{
+stuct node*new node;
+new node=(struct node*)malloc(size of(struct node));
+new node->data=value;
+if(top=NULL)
+new node->next=NULL;
+else
+new node->next=top;
+top=new node;
+pritf("\n insertion is successfull");
+}
+void pop()
+{
+if(top=NULL)
+printf("\n UNDERFLOW");
+else
+{
+struct node*temp=top;
+printf("\n deleted element:%d"temp->data;
+top=temp->next;
+free(temp);
+}
+}
+void display()
+{
+struct node*temp=top;
+if(temp==NULL)
+printf("\n stack is empty");
+else
+{
+printf("NULL<---");
+while(temp->next!=NULL){
+printf("%d<---",temp->data);
+temp=temp->next;
+}
+printf("%d",temp->data);
+}
+}
